@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <div>
-            Componente do Header 2
+            Componente do Header
         </div>
     );
 }
