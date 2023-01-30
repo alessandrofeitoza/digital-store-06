@@ -12,7 +12,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    title: 'Queima de estoque NIKE',
+    title: 'Queima de estoque NIKE '+String.fromCodePoint('0x1F525'),
     description: 'Bla bla bla bla bla',
     actionButton: 'Saiba mais',
     image: 'https://freepngimg.com/thumb/categories/627.png',
@@ -68,7 +68,7 @@ export default function Banner() {
             {Math.abs(activeStep - index) <= 2 ? (
               <section className="carousel">
                 <div>
-                    <h1>{step.title}</h1>
+                    <h1>{step.title} </h1>
                     <p>{step.description}</p>
 
                     <Button color="primary" variant="contained">

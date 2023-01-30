@@ -1,3 +1,7 @@
+# Passo 0
+## Ir pro branch principal
+`git checkout main`
+
 # Passo 1
 ## Atualizar o branch local
 
