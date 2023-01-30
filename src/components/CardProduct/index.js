@@ -9,18 +9,18 @@ export default function CardProduto (props) {
             <Paper elevation={3}>
                 <div style={{height: 10}}>
                     {
-                        props.discount === true && <span className="discount">30% OFF</span>                        
+                        props.info.discount !== false && <span className="discount">{props.info.discount}% OFF</span>                        
                     }
                 </div>
 
-                <img src={sapato}/>
+                <img src={props.info.image}/>
             </Paper>
 
-            <Typography color="gray">Tennis</Typography>
-            <Typography>K-Swiss V8 - Masculino</Typography>
+            <Typography color="gray">{props.info.category}</Typography>
+            <Typography>{props.info.make} {props.info.model}</Typography>
             <Typography>
-                <span><s>$200</s></span>
-                <span>$100</span>
+                <span><s>${props.info.listPrice}</s></span>
+                <span>${props.info.salesPrice}</span>
             </Typography>
         </div>
     )

@@ -4,8 +4,17 @@ import Banner from "../../components/Banner";
 import { Grid } from "@mui/material";
 
 import CardProduct from "../../components/CardProduct";
+import { useEffect, useState } from "react";
 
 export default function Products() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8000/products')
+            .then(response => response.json())
+            .then(response => setData(response));
+    }, []);
+
     return (
         <div>
             <Header/>
@@ -15,12 +24,14 @@ export default function Products() {
             Pagina de Produtos
 
             <Grid container spacing={3}>
-                <Grid item xs={4}> <CardProduct discount={true}/> </Grid>
-                <Grid item xs={4}> <CardProduct/> </Grid>
-                <Grid item xs={4}> <CardProduct discount={true}/> </Grid>
-                <Grid item xs={4}> <CardProduct/> </Grid>
+                {data.map(product => {
+                    return (
+                        <Grid item xs={4}> 
+                            <CardProduct info={product}/> 
+                        </Grid>
+                    )
+                })}
             </Grid>
-
         </div>
     );
 }
