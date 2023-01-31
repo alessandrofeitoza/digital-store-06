@@ -13,7 +13,7 @@ export default function CardProduto (props) {
                     }
                 </div>
 
-                <img src={props.info.image}/>
+                <img width={'80%'} src={props.info.image}/>
             </Paper>
 
             <Typography color="gray">{props.info.category}</Typography>
