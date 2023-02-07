@@ -1,4 +1,32 @@
 {
+    "trending-collections": [
+        {
+            "id": 1,
+            "label": "Camisetas",
+            "icon": "heart"
+        },
+        {
+            "id": 2,
+            "label": "Tenis",
+            "icon": "fire"
+        },
+        {
+            "id": 3,
+            "label": "Bonés",
+            "icon": "user"
+        },
+        {
+            "id": 4,
+            "label": "Headphones",
+            "icon": "house"
+        },
+        {
+            "id": 5,
+            "label": "Óculos",
+            "icon": "umbrella"
+        }
+    ],
+
     "products": [
         {
             "id": 1,
